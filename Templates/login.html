@@ -1,0 +1,142 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SRMS | Login</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="{% static 'plugins/fontawesome-free/css/all.min.css' %}">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bootstrap 4 -->
+  <link rel="stylesheet" href="{% static 'plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css' %}">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="{% static 'plugins/icheck-bootstrap/icheck-bootstrap.min.css' %}">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="{% static 'plugins/jqvmap/jqvmap.min.css' %}">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="{% static 'dist/css/adminlte.min.css' %}">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="{% static 'plugins/overlayScrollbars/css/OverlayScrollbars.min.css' %}">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="{% static 'plugins/daterangepicker/daterangepicker.css' %}">
+  <!-- summernote -->
+  <link rel="stylesheet" href="{% static 'plugins/summernote/summernote-bs4.min.css' %}">
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+<div class="wrapper">
+
+  <!-- Preloader -->
+  <div class="preloader flex-column justify-content-center align-items-center">
+    <img class="animation__shake" src="{% static 'dist/img/cpi_logo.png' %}" alt="SRMS LOGO" height="60" width="60">
+  </div>
+
+</head>
+
+<body background="{% static 'dist/img/wave_1.svg'%}" style="background-repeat: no-repeat; font-family: sans-serif;">
+
+		<!--
+		<div class="justify-content-center">
+		<img src="{% static 'dist/img/cpi_logo.png' %}" class="img-circle elevation-2" style="height: 8%; width: 8%;" alt="CPI LOGO">
+		</div>
+	
+	<div class="col-lg-4 col-md-4 col-sm-4 container justify-content-center">
+  		<div class="col">
+    		<img src="{% static 'dist/img/cpi_logo.png' %}" class="img-circle elevation-2" alt="CPI LOGO">
+  		</div>
+	</div>
+
+<div class="row">
+    <div class="w-30 mx-auto">
+     	<img src="{% static 'dist/img/cpi_logo.png' %}" class="img-circle elevation-2" style="height: 65%; width: 60%; margin-top: 43%" alt="CPI LOGO">
+    </div>
+  </div>-->
+
+
+	<!--Login Card-->
+	<div class="card card-primary" style="width:40%; margin: 15% 30% 0% 30%">
+              <div class="card-header">
+                <h3 class="card-title" style="font-weight: bold; font-family: sans-serif;">
+                	Student Results Management System
+                </h3>
+              </div>
+              <!-- /.card-header -->
+              <!-- form start -->
+              <form id="quickForm" novalidate="novalidate" method="get">
+                <div class="card-body">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Enter Username</label>
+                    <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                    <input type="email" name="email" class="form-control " id="exampleInputEmail1" placeholder="Sumit Jamnani" aria-invalid="true" aria-describedby="exampleInputEmail1-error">
+                    </div>
+                    <!--class="form-control is-invalid"-->
+                  <!--<span id="exampleInputEmail1-error" class="error invalid-feedback">Please enter a vaild email address</span>-->
+              	</div>
+
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Enter Password</label>
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                    <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password" aria-describedby="exampleInputPassword1-error" aria-invalid="false">
+                  </div>
+                  <span id="exampleInputPassword1-error" class="error invalid-feedback" style="display: none;"></span></div>
+                  <div class="form-group mb-0">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" name="terms" class="custom-control-input" id="exampleCheck1" aria-describedby="terms-error" aria-invalid="false">
+                      <label class="custom-control-label" for="exampleCheck1">Remember Me</label>
+                    </div>
+                  <span id="terms-error" class="error invalid-feedback" style="display: none;"></span></div>
+                </div>
+                <!-- /.card-body -->
+                <div class="card-footer">
+                	
+                  	<button type="submit" class="btn btn-primary">
+                  		<i class="fas fa-sign-in-alt"></i> Sign In
+                  	</button>
+                </div>
+              </form>
+	</div>
+
+
+<!-- jQuery -->
+<script src="{% static 'plugins/jquery/jquery.min.js' %}"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="{% static 'plugins/jquery-ui/jquery-ui.min.js' %}"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button)
+</script>
+<!-- Bootstrap 4 -->
+<script src="{% static 'plugins/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<!-- ChartJS -->
+<script src="{% static 'plugins/chart.js/Chart.min.js' %}"></script>
+<!-- Sparkline -->
+<script src="{% static 'plugins/sparklines/sparkline.js' %}"></script>
+<!-- JQVMap -->
+<script src="{% static 'plugins/jqvmap/jquery.vmap.min.js' %}"></script>
+<script src="{% static 'plugins/jqvmap/maps/jquery.vmap.usa.js' %}"></script>
+<!-- jQuery Knob Chart -->
+<script src="{% static 'plugins/jquery-knob/jquery.knob.min.js' %}"></script>
+<!-- daterangepicker -->
+<script src="{% static 'plugins/moment/moment.min.js' %}"></script>
+<script src="{% static 'plugins/daterangepicker/daterangepicker.js' %}"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="{% static 'plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js' %}"></script>
+<!-- Summernote -->
+<script src="{% static 'plugins/summernote/summernote-bs4.min.js' %}"></script>
+<!-- overlayScrollbars -->
+<script src="{% static 'plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js' %}"></script>
+<!-- AdminLTE App -->
+<script src="{% static 'dist/js/adminlte.js' %}"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="{% static 'dist/js/demo.js' %}"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="{% static 'dist/js/pages/dashboard.js' %}"></script>	
+
+</body>
+</html>
