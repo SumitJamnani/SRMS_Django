@@ -16,19 +16,23 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from Login.views import login_view
-from Registration.views import registration_view
+from Registration.views import registration_view,import_user_view,homepage_view
 from Admin.views import admin_view
 from Director.views import director_view
 from Faculty.views import faculty_view
 from Student.views import student_view
+from Results.views import import_result_view
 
 urlpatterns = [
-    path('',login_view),
-    path('admin/', admin_view),
-    path('login/',login_view),
-    path('registration/',registration_view),
-    path('base/',admin_view),
-    path('director/', director_view),
-    path('faculty/', faculty_view),
-    path('student/', student_view),
+    path('',login_view, name=''),
+    path('admin/', admin_view, name='admin'),
+    path('login/',login_view, name='login'),
+    path('registration/',registration_view, name='registration'),
+    path('base/',admin_view, name='base'),
+    path('director/', director_view, name='director'),
+    path('faculty/', faculty_view, name='faculty'),
+    path('student/', student_view, name='student'),
+    path('import_user/', import_user_view, name='import_user'),
+    path('home/', homepage_view, name='home'),
+    path('import_result/', import_result_view, name='import_result'),
 ]

@@ -53,7 +53,7 @@
 
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a href="#" class="btn btn-default bg-info"><i class="fas fa-power-off"></i> Logout</a>
+        <a href="{% url 'login' %}" class="btn btn-default bg-info"><i class="fas fa-power-off"></i> Logout</a>
       </li>
     </ul>
 
@@ -90,7 +90,7 @@
 
           <!-- Home Tab -->
           <li class="nav-item menu-open">
-            <a href="#" class="nav-link active">
+            <a href="{% url 'home' %} " class="nav-link active">
               <i class="nav-icon fas fa-home"></i>
               <p>
                 Home
@@ -157,7 +157,7 @@
 
               <ul class="nav nav-treeview ml-2">
                 <li class="nav-item">
-                  <a href="./index.html" class="nav-link">
+                  <a href="#" class="nav-link">
                     <i class="far fa-plus-square nav-icon"></i>
                     <p>
                       Add Manually
@@ -166,7 +166,7 @@
                 </li>
 
                 <li class="nav-item">
-                  <a href="./index.html" class="nav-link">
+                  <a href="{% url 'import_user' %}" class="nav-link">
                     <i class="fa fa-file-import nav-icon"></i>
                     <p>
                       Import Users
@@ -216,7 +216,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./index2.html" class="nav-link">
+                <a href="{% url 'import_result' %}" class="nav-link">
                   <i class="fa fa-file-import nav-icon"></i>
                   <p>Import Results</p>
                 </a>
@@ -252,31 +252,36 @@
 
 <!----------------------------------------------------------------------------------------!-->
 
+  <div class="content-wrapper" style="min-height: 2168.88px;">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>{% block header %} {% endblock header %}</h1>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section> 
+
+
 <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+  <div class="content">
     <!-- Main content -->
     <section class="content">
+      {% block content %}
       
-
-      <div class="col-xs-6" align="center">
-        <img src="{% static 'dist/img/cpi_logo1.png' %}" Height="285px" Width="276px"/>
-      </div>
-
-      <div class="col-xs-8" align="center">
-        <h1>
-        Shree Chimanbhai Patel Institute
-        </h1>
-      </div>
-
-
-      <div class="container-fluid">
-        {% block content %}
-        {% endblock content %}
-      </div><!-- /.container-fluid -->
-    
+      {% endblock content %}
+    <!-- </div> -->
     </section>
     <!-- /.content -->
   </div>
+  </div>
+
+
+
+
+
   <!-- /.content-wrapper -->
   <footer class="main-footer" style="text-align: center;">
     <strong>Copyright &copy; 2021-2022 <a href="#">CPI MCA</a>.</strong>

@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'Director',
     'Faculty',
     'Student',
+    'Results',
 
     #Django Apps
     'django.contrib.admin',

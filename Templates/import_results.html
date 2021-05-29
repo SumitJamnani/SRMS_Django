@@ -1,0 +1,134 @@
+{% extends 'director_panel.html' %}
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title></title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title%} Import Results {% endblock title %}</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="{% static 'plugins/fontawesome-free/css/all.min.css' %}">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bootstrap 4 -->
+  <link rel="stylesheet" href="{% static 'plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css' %}">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="{% static 'plugins/icheck-bootstrap/icheck-bootstrap.min.css' %}">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="{% static 'plugins/jqvmap/jqvmap.min.css' %}">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="{% static 'dist/css/adminlte.min.css' %}">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="{% static 'plugins/overlayScrollbars/css/OverlayScrollbars.min.css' %}">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="{% static 'plugins/daterangepicker/daterangepicker.css' %}">
+  <!-- summernote -->
+  <link rel="stylesheet" href="{% static 'plugins/summernote/summernote-bs4.min.css' %}">
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+<div class="wrapper">
+
+  <!-- Preloader -->
+  <div class="preloader flex-column justify-content-center align-items-center">
+    <img class="animation__shake" src="{% static 'dist/img/cpi_logo.png' %}" alt="SRMS LOGO" height="60" width="60">
+  </div>
+</head>
+
+<body>
+	<!-- Page header -->
+	{% block header %} Import Results {% endblock header %}
+
+	{% block content %}
+	<div class="container">
+	<div class="row justify-content-center" style="margin-top: 10%;">
+          <div class="col-md-8">
+            <div class="card card-default">
+              <div class="card-header">
+                <h3 class="card-title text-secondary">Select .xl File Which Contains Student Results</h3>
+              </div>
+              <div class="card-body">
+                <div id="actions" class="row">
+                  <div class="col-lg-6">
+                    <div class="btn-group w-100">
+                      <span class="btn btn-success col fileinput-button dz-clickable">
+                        <i class="fas fa-plus"></i>
+                        <span>Add file</span>
+                      </span>
+                      <button type="submit" class="btn btn-primary col start">
+                        <i class="fas fa-upload"></i>
+                        <span>Start upload</span>
+                      </button>
+                      <button type="reset" class="btn btn-warning col cancel">
+                        <i class="fas fa-times-circle"></i>
+                        <span>Cancel upload</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 d-flex align-items-center">
+                    <div class="fileupload-process w-100">
+                      <div id="total-progress" class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" style="opacity: 0;">
+                        <div class="progress-bar progress-bar-success" style="width: 100%;" data-dz-uploadprogress=""></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="table table-striped files" id="previews">
+                  
+                </div>
+              </div>
+              <!-- /.card-body -->
+              <div class="card-footer">
+              
+              </div>
+            </div>
+            <!-- /.card -->
+          </div>
+        </div>
+        </div>
+    {% endblock content %}
+
+
+
+<!-- jQuery -->
+<script src="{% static 'plugins/jquery/jquery.min.js' %}"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="{% static 'plugins/jquery-ui/jquery-ui.min.js' %}"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button)
+</script>
+<!-- Bootstrap 4 -->
+<script src="{% static 'plugins/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<!-- ChartJS -->
+<script src="{% static 'plugins/chart.js/Chart.min.js' %}"></script>
+<!-- Sparkline -->
+<script src="{% static 'plugins/sparklines/sparkline.js' %}"></script>
+<!-- JQVMap -->
+<script src="{% static 'plugins/jqvmap/jquery.vmap.min.js' %}"></script>
+<script src="{% static 'plugins/jqvmap/maps/jquery.vmap.usa.js' %}"></script>
+<!-- jQuery Knob Chart -->
+<script src="{% static 'plugins/jquery-knob/jquery.knob.min.js' %}"></script>
+<!-- daterangepicker -->
+<script src="{% static 'plugins/moment/moment.min.js' %}"></script>
+<script src="{% static 'plugins/daterangepicker/daterangepicker.js' %}"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="{% static 'plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js' %}"></script>
+<!-- Summernote -->
+<script src="{% static 'plugins/summernote/summernote-bs4.min.js' %}"></script>
+<!-- overlayScrollbars -->
+<script src="{% static 'plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js' %}"></script>
+<!-- AdminLTE App -->
+<script src="{% static 'dist/js/adminlte.js' %}"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="{% static 'dist/js/demo.js' %}"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="{% static 'dist/js/pages/dashboard.js' %}"></script>	
+</body>
+</html>
