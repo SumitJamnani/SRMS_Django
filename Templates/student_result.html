@@ -1,4 +1,4 @@
-{% extends 'director_panel.html' %}
+{% extends 'student_panel.html' %}
 {% load static %}
 
 <!DOCTYPE html>
@@ -8,7 +8,7 @@
 	<title></title>
 	<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% block title%} Import Results {% endblock title %}</title>
+  <title>{% block title%} Results {% endblock title %}</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -43,20 +43,20 @@
 
 <body>
 	<!-- Page header -->
-	{% block header %} Import Results {% endblock header %}
+	{% block header %} Results {% endblock header %}
 
 	{% block content %}
-
-
-    <div class="card card-primary" style="width:40%; margin: 3% 30% 0% 30%">
+  <div class="card card-primary" style="width:40%; margin: 4% 30% 0% 30%">
               <!-- Card Header -->
               <div class="card-header">
-                <h3 class="card-title" style="color: white;">Select .xl File Which Contains Student Results</h3>
+                <h3 class="card-title" style="font-weight: bold; font-family: sans-serif; height: 13px;">
+                  
+                </h3>
               </div>
               <!-- /.card-header -->
 
               <!-- form start -->
-              <form id="import_result" novalidate="novalidate" method="get">
+              <form id="result" novalidate="novalidate" method="get">
                 <div class="card-body">
 
                   <div class="form-group">
@@ -94,32 +94,74 @@
                           <option>Laravel Unit 3</option>
                         </select>
                   </div>
-                  
-                  <div class="row justify-content-center">
-                  <div class="btn-group w-60 form-group">
-                      <span class="btn btn-success col fileinput-button dz-clickable">
-                        <i class="fas fa-plus"></i>
-                        <span>Add file</span>
-                      </span>
-                      <button type="submit" class="btn btn-primary col start">
-                        <i class="fas fa-upload"></i>
-                        <span>Start upload</span>
-                      </button>
-                      <button type="reset" class="btn btn-warning col cancel">
-                        <i class="fas fa-times-circle"></i>
-                        <span>Cancel upload</span>
-                      </button>
+
+                  <div class="form-group">
+                    <label for="enrollment_number">Enter Enrollment Number</label>
+                    <div class="input-group-prepend">
+                    <!-- <span class="input-group-text"><i class="fas fa-user"></i></span> -->
+                    <input type="text" name="enrollment_number" class="form-control " id="enrollment_number" placeholder="205350694034" aria-invalid="true" aria-describedby="enrollment_number">
                     </div>
                   </div>
+                  
                 </div>
-              </form> 
-              <!-- /.card-body -->
+                
+                <!-- /.card-body -->
+                <div class="card-footer">
+                  
+                    <button type="submit" class="btn btn-primary">
+                      <!-- <i class="fas fa-plus"></i> --> View Result
+                    </button>
+                    
+                </div>
+              </form>
+  </div>
 
-              <div class="card-footer">
-                <h6 class="text-info" style="font-weight: bold;">XL File Should Contain These Fileds : (Enrollment Number, Name, Status, Marks obtained, Total Marks, Passing Marks)</h6>
+
+
+ <div class="card card-info" style="margin-top: 5%">
+               <div class="card-header">
+                <h3 class="card-title" style="font-weight: bold; font-family: sans-serif; height: 13px;">
+                  
+                </h3>
               </div>
-    </div>
-            <!-- /.card -->
+              <!-- /.card-header -->
+              
+              <div class="card-body">
+                <div id="example1_wrapper" class="dataTables_wrapper dt-bootstrap4"><div class="row justify-content-center"><div class="col-sm-12 col-md-6"></div></div><div class="row justify-content-center"><div class="col-sm-12"><table id="result" class="table table-bordered table-striped dataTable dtr-inline" role="grid" aria-describedby="example1_info">
+
+                  <thead>
+                  <tr role="row">
+                    <th tabindex="0" aria-controls="example1" rowspan="1" colspan="1">Enrollment Number</th>
+                    <th tabindex="0" aria-controls="example1" rowspan="1" colspan="1">Name</th>
+                    <th tabindex="0" aria-controls="example1" rowspan="1" colspan="1">Status</th>
+                    <th tabindex="0" aria-controls="example1" rowspan="1" colspan="1">Marks obtained</th>
+                    <th tabindex="0" aria-controls="example1" rowspan="1" colspan="1">Total Marks</th>
+                    <th tabindex="0" aria-controls="example1" rowspan="1" colspan="1">Passing Marks</th>
+                  </tr>
+                  </thead>
+
+                  <tbody>
+                  <tr class="odd">
+                    <td>205350694034</td>
+                    <td>Jamnani Sumit</td>
+                    <td>Pass</td>
+                    <td>69</td>
+                    <td>70</td>
+                    <td>35</td>
+                  </tr>
+                  </tbody>
+
+                  <tfoot>
+                    <button type="button" class="btn btn-primary float-right" style="margin-right: 5px; margin-bottom: 5px;">
+                      <i class="fas fa-download"></i> Download Result
+                    </button>
+                  </tfoot>
+
+                </table></div></div></div>
+              </div>
+              <!-- /.card-body -->
+            </div>
+
     {% endblock content %}
 
 

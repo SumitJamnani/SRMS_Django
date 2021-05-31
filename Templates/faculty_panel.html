@@ -109,7 +109,7 @@
             </a>
             <ul class="nav nav-treeview ml-2">
               <li class="nav-item">
-                <a href="./index.html" class="nav-link">
+                <a href="{% url 'course_mgmt' %}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Course</p>
                 </a>
@@ -166,7 +166,7 @@
                 </li>
 
                 <li class="nav-item">
-                  <a href="./index.html" class="nav-link">
+                  <a href="{% url 'import_user' %}" class="nav-link">
                     <i class="fa fa-file-import nav-icon"></i>
                     <p>
                       Import Users
@@ -203,7 +203,7 @@
 
           <!-- Results DropDown -->
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{% url 'import_result' %}" class="nav-link">
               <i class="nav-icon fas fa-book"></i>
               <p>
                 Manage Results
@@ -218,7 +218,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./index2.html" class="nav-link">
+                <a href="{% url 'import_result' %}" class="nav-link">
                   <i class="fa fa-file-import nav-icon"></i>
                   <p>Import Results</p>
                 </a>
@@ -229,7 +229,7 @@
           
           <!-- Reports Tab -->
           <li class="nav-item">
-              <a href="#" class="nav-link">
+              <a href="{% url 'report' %}" class="nav-link">
                 <i class="nav-icon fas fa-chart-pie"></i>
                 <p>
                  Reports

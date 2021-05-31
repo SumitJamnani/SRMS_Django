@@ -8,7 +8,7 @@
 	<title></title>
 	<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% block title%} Import Results {% endblock title %}</title>
+  <title>{% block title%} Reports {% endblock title %}</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -43,20 +43,20 @@
 
 <body>
 	<!-- Page header -->
-	{% block header %} Import Results {% endblock header %}
+	{% block header %} Reports {% endblock header %}
 
 	{% block content %}
-
-
-    <div class="card card-primary" style="width:40%; margin: 3% 30% 0% 30%">
+  <div class="card card-primary" style="width:40%; margin: 4% 30% 0% 30%">
               <!-- Card Header -->
               <div class="card-header">
-                <h3 class="card-title" style="color: white;">Select .xl File Which Contains Student Results</h3>
+                <h3 class="card-title" style="font-weight: bold; font-family: sans-serif; height: 13px;">
+                  
+                </h3>
               </div>
               <!-- /.card-header -->
 
               <!-- form start -->
-              <form id="import_result" novalidate="novalidate" method="get">
+              <form id="report" novalidate="novalidate" method="get">
                 <div class="card-body">
 
                   <div class="form-group">
@@ -95,31 +95,94 @@
                         </select>
                   </div>
                   
-                  <div class="row justify-content-center">
-                  <div class="btn-group w-60 form-group">
-                      <span class="btn btn-success col fileinput-button dz-clickable">
-                        <i class="fas fa-plus"></i>
-                        <span>Add file</span>
-                      </span>
-                      <button type="submit" class="btn btn-primary col start">
-                        <i class="fas fa-upload"></i>
-                        <span>Start upload</span>
-                      </button>
-                      <button type="reset" class="btn btn-warning col cancel">
-                        <i class="fas fa-times-circle"></i>
-                        <span>Cancel upload</span>
-                      </button>
-                    </div>
-                  </div>
                 </div>
-              </form> 
-              <!-- /.card-body -->
+                
+                <!-- /.card-body -->
+                <div class="card-footer">
+                  
+                    <button type="submit" class="btn btn-primary">
+                      <!-- <i class="fas fa-plus"></i> --> View Report
+                    </button>
+                    
+                </div>
+              </form>
+  </div>
 
-              <div class="card-footer">
-                <h6 class="text-info" style="font-weight: bold;">XL File Should Contain These Fileds : (Enrollment Number, Name, Status, Marks obtained, Total Marks, Passing Marks)</h6>
+
+
+ <div class="card card-info" style="margin-top: 8%">
+               <div class="card-header">
+                <h3 class="card-title" style="font-weight: bold; font-family: sans-serif; height: 13px;">
+                  
+                </h3>
               </div>
-    </div>
-            <!-- /.card -->
+              <!-- /.card-header -->
+              
+              <div class="card-body">
+                <div id="example1_wrapper" class="dataTables_wrapper dt-bootstrap4"><div class="row"><div class="col-sm-12 col-md-6"></div></div><div class="row"><div class="col-sm-12"><table id="report" class="table table-bordered table-striped dataTable dtr-inline" role="grid" aria-describedby="example1_info">
+
+                  <thead>
+                  <tr role="row">
+                    <th tabindex="0" aria-controls="example1" rowspan="1" colspan="1">Enrollment Number</th>
+                    <th tabindex="0" aria-controls="example1" rowspan="1" colspan="1">Name</th>
+                    <th tabindex="0" aria-controls="example1" rowspan="1" colspan="1">Status</th>
+                    <th tabindex="0" aria-controls="example1" rowspan="1" colspan="1">Marks obtained</th>
+                    <th tabindex="0" aria-controls="example1" rowspan="1" colspan="1">Total Marks</th>
+                    <th tabindex="0" aria-controls="example1" rowspan="1" colspan="1">Passing Marks</th>
+                  </tr>
+                  </thead>
+
+                  <tbody>
+                  <tr class="odd">
+                    <td>205350694034</td>
+                    <td>Jamnani Sumit</td>
+                    <td>Pass</td>
+                    <td>69</td>
+                    <td>70</td>
+                    <td>35</td>
+                  </tr>
+
+                  <tr class="even">
+                    <td>205350694035</td>
+                    <td>Pathak Niyati</td>
+                    <td>Pass</td>
+                    <td>65</td>
+                    <td>70</td>
+                    <td>35</td>
+                  </tr>
+
+                  <tr class="odd">
+                    <td>205350694036</td>
+                    <td>Patel Avisha</td>
+                    <td>Pass</td>
+                    <td>67</td>
+                    <td>70</td>
+                    <td>35</td>
+                  </tr>
+
+                  <tr class="even">
+                    <td>205350694037</td>
+                    <td>Cpi Mca</td>
+                    <td>Pass</td>
+                    <td>68</td>
+                    <td>70</td>
+                    <td>35</td>
+                  </tr>                  
+                  </tbody>
+
+                  <tfoot>
+                    <button type="button" class="btn btn-primary float-right" style="margin-right: 5px; margin-bottom: 5px;">
+                      <i class="fas fa-download"></i> Download Report
+                    </button>
+                  </tfoot>
+                
+                </table></div></div>
+
+                <div class="row"><div class="col-sm-12 col-md-5"><div class="dataTables_info" id="example1_info" role="status" aria-live="polite">Showing 1 to 4 of 10 entries</div></div><div class="col-sm-12 col-md-7"><div class="dataTables_paginate paging_simple_numbers" id="example1_paginate"><ul class="pagination"><li class="paginate_button page-item previous disabled" id="example1_previous"><a href="#" aria-controls="example1" data-dt-idx="0" tabindex="0" class="page-link">Previous</a></li><li class="paginate_button page-item active"><a href="#" aria-controls="example1" data-dt-idx="1" tabindex="0" class="page-link">1</a></li><li class="paginate_button page-item "><a href="#" aria-controls="example1" data-dt-idx="2" tabindex="0" class="page-link">2</a></li><li class="paginate_button page-item "><a href="#" aria-controls="example1" data-dt-idx="3" tabindex="0" class="page-link">3</a></li><li class="paginate_button page-item "><a href="#" aria-controls="example1" data-dt-idx="4" tabindex="0" class="page-link">4</a></li><li class="paginate_button page-item "><a href="#" aria-controls="example1" data-dt-idx="5" tabindex="0" class="page-link">5</a></li><li class="paginate_button page-item "><a href="#" aria-controls="example1" data-dt-idx="6" tabindex="0" class="page-link">6</a></li><li class="paginate_button page-item next" id="example1_next"><a href="#" aria-controls="example1" data-dt-idx="7" tabindex="0" class="page-link">Next</a></li></ul></div></div></div></div>
+              </div>
+              <!-- /.card-body -->
+            </div>
+
     {% endblock content %}
 
 

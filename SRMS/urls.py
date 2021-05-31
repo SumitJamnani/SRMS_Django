@@ -21,7 +21,7 @@ from Admin.views import admin_view
 from Director.views import director_view
 from Faculty.views import faculty_view
 from Student.views import student_view
-from Results.views import import_result_view
+from Results.views import import_result_view,report_view,student_result_view
 from Course.views import course_mgmt_view
 
 urlpatterns = [
@@ -37,4 +37,6 @@ urlpatterns = [
     path('home/', homepage_view, name='home'),
     path('import_result/', import_result_view, name='import_result'),
     path('course_mgmt/', course_mgmt_view, name='course_mgmt'),
+    path('report/', report_view, name='report'),
+    path('student_result/', student_result_view, name='student_result'),
 ]

@@ -90,7 +90,7 @@
 
           <!-- Home Tab -->
           <li class="nav-item menu-open">
-            <a href="#" class="nav-link active">
+            <a href="{% url 'home' %}" class="nav-link active">
               <i class="nav-icon fas fa-home"></i>
               <p>
                 Home
@@ -112,7 +112,7 @@
 
           <!-- Results DropDown -->
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{% url 'student_result' %}" class="nav-link">
               <i class="nav-icon fas fa-book"></i>
               <p>
                 Results
@@ -142,32 +142,34 @@
 
 <!----------------------------------------------------------------------------------------!-->
 
+
+  <div class="content-wrapper" style="min-height: 2168.88px;">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>{% block header %} {% endblock header %}</h1>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section> 
+
+
 <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+  <div class="content">
     <!-- Main content -->
     <section class="content">
-      
+      {% block content %}
 
-      <div class="col-xs-6" align="center">
-        <img src="{% static 'dist/img/cpi_logo1.png' %}" Height="285px" Width="276px"/>
-      </div>
-
-      <div class="col-xs-8" align="center">
-        <h1>
-        Shree Chimanbhai Patel Institute
-        </h1>
-      </div>
-
-
-      <div class="container-fluid">
-        {% block content %}
-        {% endblock content %}
-      </div><!-- /.container-fluid -->
-    
+      {% endblock content %}
+    <!-- </div> -->
     </section>
     <!-- /.content -->
   </div>
-  <!-- /.content-wrapper -->
+  </div>
+
+
   <footer class="main-footer" style="text-align: center;">
     <strong>Copyright &copy; 2021-2022 <a href="#">CPI MCA</a>.</strong>
     All rights reserved.
