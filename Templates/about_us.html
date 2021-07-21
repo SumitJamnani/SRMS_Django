@@ -1,0 +1,134 @@
+{% extends BaseTemplate %}
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title%} About Developers {% endblock title %}</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="{% static 'plugins/fontawesome-free/css/all.min.css' %}">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Tempusdominus Bootstrap 4 -->
+    <link rel="stylesheet" href="{% static 'plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css' %}">
+    <!-- iCheck -->
+    <link rel="stylesheet" href="{% static 'plugins/icheck-bootstrap/icheck-bootstrap.min.css' %}">
+    <!-- JQVMap -->
+    <link rel="stylesheet" href="{% static 'plugins/jqvmap/jqvmap.min.css' %}">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="{% static 'dist/css/adminlte.min.css' %}">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="{% static 'plugins/overlayScrollbars/css/OverlayScrollbars.min.css' %}">
+    <!-- Daterange picker -->
+    <link rel="stylesheet" href="{% static 'plugins/daterangepicker/daterangepicker.css' %}">
+    <!-- summernote -->
+    <link rel="stylesheet" href="{% static 'plugins/summernote/summernote-bs4.min.css' %}">
+
+
+
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+<div class="wrapper">
+
+    <!-- Preloader -->
+    <div class="preloader flex-column justify-content-center align-items-center">
+        <img class="animation__shake" src="{% static 'dist/img/cpi_logo.png' %}" alt="SRMS LOGO" height="60" width="60">
+    </div>
+    </head>
+
+    <body>
+    <!-- Page header -->
+    {% block header %} About Developers {% endblock header %}
+
+    {% block content %}
+
+    <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-purple rounded box-shadow">
+        <img class="mr-3" src="{% static 'dist/img/cpi_logo_transparent.png' %}" alt="" width="48" height="48">
+        <div class="lh-100">
+            <h6 class="mb-0 text-white lh-100">CPIMCA</h6>
+            <small>oldest And Reputed Educational Trust</small>
+        </div>
+    </div>
+
+
+    <div class="container" style="margin-top: 5%">
+        <div class="row">
+            <div class="col-lg-4" align="center">
+                <img class="rounded-circle" src="{% static 'dist/img/Sumit.jpg' %}" alt="Sumit Jamnani Photo" width="150" height="155">
+                <h2>Sumit Jamnani</h2>
+                <p></p>
+                <!-- <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p> -->
+            </div><!-- /.col-lg-4 -->
+
+            <div class="col-lg-4" align="center">
+                <img class="rounded-circle" src="{% static 'dist/img/Niyati1.png' %}" alt="Niyati Pathak Photo" width="150" height="155">
+                <h2>Niyati Pathak</h2>
+                <p></p>
+                <!-- <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p> -->
+            </div><!-- /.col-lg-4 -->
+
+
+            <div class="col-lg-4" align="center">
+                <img class="rounded-circle" src="{% static 'dist/img/Avisha_patel.png' %}" alt="Avisha Patel Photo" width="150" height="155">
+                <h2>Avisha Patel</h2>
+                <p></p>
+                <!-- <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p> -->
+            </div><!-- /.col-lg-4 -->
+        </div>
+    </div>
+
+    <div align="center">
+        <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-purple rounded box-shadow" style="width: 70%;">
+            <img class="mr-3" src="{% static 'dist/img/testimonial_transparent.png' %}" alt="" width="48" height="48">
+            <div class="lh-100"  align="left">
+                <h6 class="mb-0 lh-100" style="color: black; font-weight: bold;" >Testimonial</h6>
+                <small>Great things are rarely achieved by just one person. Usually, they are accomplished by a group of people, and when everyone is committed to the overall goal, teams move faster, are more innovative and more successful. Successful teamwork is essential for anyone attempting complete projects successfully.</small>
+            </div>
+        </div>
+    </div>
+    {% endblock content %}
+
+
+
+    <!-- jQuery -->
+    <script src="{% static 'plugins/jquery/jquery.min.js' %}"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="{% static 'plugins/jquery-ui/jquery-ui.min.js' %}"></script>
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+    <script>
+  $.widget.bridge('uibutton', $.ui.button)
+</script>
+    <!-- Bootstrap 4 -->
+    <script src="{% static 'plugins/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <!-- ChartJS -->
+    <script src="{% static 'plugins/chart.js/Chart.min.js' %}"></script>
+    <!-- Sparkline -->
+    <script src="{% static 'plugins/sparklines/sparkline.js' %}"></script>
+    <!-- JQVMap -->
+    <script src="{% static 'plugins/jqvmap/jquery.vmap.min.js' %}"></script>
+    <script src="{% static 'plugins/jqvmap/maps/jquery.vmap.usa.js' %}"></script>
+    <!-- jQuery Knob Chart -->
+    <script src="{% static 'plugins/jquery-knob/jquery.knob.min.js' %}"></script>
+    <!-- daterangepicker -->
+    <script src="{% static 'plugins/moment/moment.min.js' %}"></script>
+    <script src="{% static 'plugins/daterangepicker/daterangepicker.js' %}"></script>
+    <!-- Tempusdominus Bootstrap 4 -->
+    <script src="{% static 'plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js' %}"></script>
+    <!-- Summernote -->
+    <script src="{% static 'plugins/summernote/summernote-bs4.min.js' %}"></script>
+    <!-- overlayScrollbars -->
+    <script src="{% static 'plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js' %}"></script>
+    <!-- AdminLTE App -->
+    <script src="{% static 'dist/js/adminlte.js' %}"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="{% static 'dist/js/demo.js' %}"></script>
+    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+    <script src="{% static 'dist/js/pages/dashboard.js' %}"></script>
+    </body>
+</html>
