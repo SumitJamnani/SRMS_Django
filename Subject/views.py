@@ -36,7 +36,7 @@ def add_subject(request):
                 subject_type = request.POST.get('subject_type')
                 course_id = Course_m.objects.get(course_id=request.POST.get('course_id'))
                 semester_id = Semester_m.objects.get(semester_id=request.POST.get('semester_id'))
-                batch_id = Batch_m.objects.get(semester_id=request.POST.get('batch_id'))
+                batch_id = Batch_m.objects.get(batch_id=request.POST.get('batch_id'))
                 SubjectRecord = Subject_m(subject_name=subject_name, subject_code=subject_code, subject_type=subject_type, course_id=course_id, semester_id=semester_id, batch_id=batch_id)
                 SubjectRecord.save()
                 messages.success(request, "Subject Inserted Successfully!!")

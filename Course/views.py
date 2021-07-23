@@ -21,24 +21,32 @@ def add_course(request):
     if request.user.is_active:
         UserData = ExtendedUser.objects.all()
         CourseData = Course_m.objects.all().order_by('-course_id')
+        BaseTemplate = base_template(request)
+        context = {'UserData' : UserData, 'CourseData' : CourseData, 'BaseTemplate' : BaseTemplate}
         if request.method == 'POST':
-            if request.POST.get('course_name') != "" and request.POST.get('director_id') is not None:
+            if request.POST.get('course_name') != "":
                 try:
                     course = Course_m.objects.get(course_name=request.POST.get('course_name'))
                     messages.error(request, "Course Already Declared!!")
-                    return render(request, "course_mgmt.html", context = {'UserData' : UserData, 'CourseData' : CourseData})
+                    return render(request, "course_mgmt.html", context)
                 except:
-                    course_name = request.POST.get('course_name')
-                    director_id = User.objects.get(id=request.POST.get('director_id'))
-                    CourseRecord = Course_m(course_name=course_name, director_id=director_id)
-                    CourseRecord.save()
-                    messages.success(request, "Course Inserted Successfully!!")
-                    return render(request, "course_mgmt.html", context = {'UserData' : UserData, 'CourseData' : CourseData})
+                    try:
+                        course_name = request.POST.get('course_name')
+                        director_id = User.objects.get(id=request.POST.get('director_id'))
+                        CourseRecord = Course_m(course_name=course_name, director_id=director_id)
+                        CourseRecord.save()
+                        messages.success(request, "Course Inserted Successfully!!")
+                        return render(request, "course_mgmt.html", context)
+                    except:
+                        course_name = request.POST.get('course_name')
+                        CourseRecord = Course_m(course_name=course_name)
+                        CourseRecord.save()
+                        messages.success(request, "Course Inserted Successfully!!")
+                        return render(request, "course_mgmt.html", context)
             else:
                 messages.error(request, "Please Fill Required Fields!!")
-                return render(request, "course_mgmt.html", context = {'UserData' : UserData, 'CourseData' : CourseData})
+                return render(request, "course_mgmt.html", context)
         else:
-            BaseTemplate = base_template(request)
             return render(request, "course_mgmt.html", context = {'UserData' : UserData, 'CourseData' : CourseData, 'BaseTemplate' : BaseTemplate})
     else:
         return redirect("/")
@@ -47,11 +55,7 @@ def add_course(request):
 #Update Particular Course From The Database
 def update_course(request, id):
     if request.user.is_active:
-        if 'course_name' in request.GET:
-            print(request.POST.get('course_name'))
-        else:
-            print('nahi mila bhai data')
-        if request.method == 'GET':
+        if request.method == 'POST':
             director_names = User.objects.all
             course_data = Course_m.objects.all().order_by('-course_id')
             if id is not None :
@@ -99,9 +103,10 @@ def search_course(request, id):
     if request.user.is_active:
         UserData = ExtendedUser.objects.all()
         CourseData = Course_m.objects.all().order_by('-course_id')
+        BaseTemplate = base_template(request)
         if id is not None :
             CourseSearch = Course_m.objects.get(course_id = id)
-            return render(request, "course_mgmt.html", context = {'UserData' : UserData, 'CourseData' : CourseData, 'CourseSearch' : CourseSearch})
+            return render(request, "course_mgmt.html", context = {'UserData' : UserData, 'CourseData' : CourseData, 'CourseSearch' : CourseSearch, 'BaseTemplate' : BaseTemplate})
         else :
             messages.error(request, "No Record Found For Selected Course Id!!")
             return redirect("/course/add")

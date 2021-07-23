@@ -41,7 +41,7 @@ def add_exam(request):
                 exam_date = request.POST.get('exam_date')
                 course_id = Course_m.objects.get(course_id=request.POST.get('course_id'))
                 semester_id = Semester_m.objects.get(semester_id=request.POST.get('semester_id'))
-                batch_id = Batch_m.objects.get(semester_id=request.POST.get('batch_id'))
+                batch_id = Batch_m.objects.get(batch_id=request.POST.get('batch_id'))
                 faculty_id = User.objects.get(id=request.POST.get('faculty_id'))
                 subject_id = Subject_m.objects.get(subject_id=request.POST.get('subject_id'))
                 ExamRecord = Exam_m(exam_name=exam_name, total_marks=total_marks, passing_marks=passing_marks, exam_date=exam_date, course_id=course_id, semester_id=semester_id, batch_id=batch_id, faculty_id=faculty_id, subject_id=subject_id)

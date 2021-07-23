@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 21, 2021 at 07:57 PM
+-- Generation Time: Jul 23, 2021 at 05:20 PM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 7.2.1
 
@@ -149,14 +149,13 @@ CREATE TABLE `auth_user` (
 --
 
 INSERT INTO `auth_user` (`id`, `password`, `last_login`, `is_superuser`, `username`, `first_name`, `last_name`, `email`, `is_staff`, `is_active`, `date_joined`) VALUES
-(1, 'pbkdf2_sha256$260000$9OqqPun93oVJkAseh9qRIR$OCwmnpjlmSJQa4tQCxFWbzoOWfEkGM5LpvXYywXmz6Q=', '2021-07-21 17:00:27.702565', 1, 'admin', '', '', 'admin@gmail.com', 1, 1, '2021-07-19 00:38:12.177788'),
-(2, 'pbkdf2_sha256$260000$FbAGvccB9QKJEvV8hNjUPr$7JndCIzhyUfNvZLSFtwAa7QOvtVUpUAktcaIN9c8/rU=', '2021-07-21 17:06:33.090036', 0, 'sumitjamnani', '', '', 'sumitjamnani786@gmail.com', 0, 1, '2021-07-19 01:40:58.294319'),
-(11, 'pbkdf2_sha256$260000$YAnuBVnztZyXOYgWYtSAhT$rH7ddIj0dg1OMdY1e/p7bqgRPzkjgA1r/IwVDdy4XxM=', NULL, 0, 'krutijani', '', '', 'kj@gmail.com', 0, 1, '2021-07-19 20:54:05.118471'),
-(12, 'pbkdf2_sha256$260000$rqkICnahj3No8KTr5GuYSO$kfkIhAxckLpFn6Gv3Y9pSwdOQfRXy+oOc5B2woFQKl4=', '2021-07-21 16:59:25.766415', 0, 'hardiksoni', '', '', 'hs@gmail.com', 0, 1, '2021-07-19 20:55:19.355802'),
-(13, 'pbkdf2_sha256$260000$joVfKUyTd9yhxXUP1oz4EB$NG/pj0aHNVwEL9WRw7aWXoxK8Vyfsxx0BZ9v2Z3gkEc=', '2021-07-21 16:56:38.118714', 0, 'harish', '', '', 'hm@gmail.com', 0, 1, '2021-07-19 20:56:11.129478'),
-(14, 'pbkdf2_sha256$260000$010ySfjMYQCDtbJcV9O63S$023jDoBFWb0yX4oNHIbQ0nagRxqkqpQQwfg/UqEul2g=', '2021-07-21 15:19:45.787156', 0, 'luckyjamnani', '', '', 'luckyjamnani@gmail.com', 0, 1, '2021-07-19 20:56:52.472102'),
-(15, 'pbkdf2_sha256$260000$ReROvoHV9EBVt6ciBJLTMV$7CRsnwmeTkTBv5a796Yoi8w6Qm0vyMCGf1c7RnW9csg=', '2021-07-20 08:13:27.361699', 0, 'anuradha', '', '', 'as@gmail.com', 0, 1, '2021-07-20 08:13:15.281117'),
-(16, 'pbkdf2_sha256$260000$c5o8Y2525LoUCUKrvpHsgr$5xgo4ncjGjp7IP6H/lt6evY+8+pCpR5qSXptqStppb8=', NULL, 0, 'tinalparikh', '', '', 'tp@gmail.com', 0, 1, '2021-07-20 23:13:33.608697');
+(1, 'pbkdf2_sha256$260000$5eXgJAeVqytH7hRhOouvfA$MnGc9NDor/RldOh9JA6xzH4wiE5d4AdpG23ZJofM+lU=', '2021-07-23 14:57:16.728030', 1, 'admin', '', '', 'admin@gmail.com', 1, 1, '2021-07-19 00:38:12.177788'),
+(27, 'pbkdf2_sha256$260000$5plUHwRllrVwjdmoCTqeGb$j67zd43VcjEcgVi+1yEw1G0UNoLt+bwCGsvfTZm/pEY=', '2021-07-23 14:05:47.692005', 0, 'hardiksoni', '', '', 'hs@gmail.com', 0, 1, '2021-07-23 13:50:51.863618'),
+(28, 'pbkdf2_sha256$260000$o38eS4BJFZiVsEDvBnQzzD$/EaARC4Z42UNy5XucZBPaQCPMyIvNf+wqyzlp1aSVyU=', '2021-07-23 14:08:43.811819', 0, 'tinalparikh', '', '', 'tp@gmail.com', 0, 1, '2021-07-23 13:59:24.472790'),
+(29, 'pbkdf2_sha256$260000$K5YdqDPk5KyBYJdgse0VfD$tq1309LO7i6RP8bpbS7ATyZV3avhPe22gVTPQrrFc1I=', NULL, 0, 'krutijani', '', '', 'kj@gmail.com', 0, 1, '2021-07-23 13:59:48.522819'),
+(30, 'pbkdf2_sha256$260000$gqZLh1GxZ784idOgCn8IfM$Q0gnVtjLLQ3GGLNiAqK6POuZktm7KCS+lNnPUwV27jc=', '2021-07-23 14:14:28.611278', 0, 'sumitjamnani', '', '', 'sumitjamnani786@gmail.com', 0, 1, '2021-07-23 14:00:30.712987'),
+(31, 'pbkdf2_sha256$260000$CYQwLFKNFyMwbEnkiEa9fd$TsyDbE9pEpkUV2oM8LN0v9xIW52xpXJ5IFN7ZHxXvPc=', '2021-07-23 14:15:56.651159', 0, 'avishapatel', '', '', 'ap@gmail.com', 0, 1, '2021-07-23 14:01:11.142885'),
+(32, 'pbkdf2_sha256$260000$w65Bs9VRpHJehMtv953X42$+cteR2oZQ9owkzjeqM+Ta4FwXSJFc3yt5y1NdZCKmFY=', '2021-07-23 14:16:33.551312', 0, 'niyatipathak', '', '', 'np@gmail.com', 0, 1, '2021-07-23 14:01:53.022865');
 
 -- --------------------------------------------------------
 
@@ -200,7 +199,7 @@ CREATE TABLE `batch_m` (
 --
 
 INSERT INTO `batch_m` (`batch_id`, `batch_name`, `course_id`, `semester_id`) VALUES
-(1, 'MCA 2020', 8, 1);
+(6, 'MCA 2020', 19, 9);
 
 -- --------------------------------------------------------
 
@@ -211,7 +210,7 @@ INSERT INTO `batch_m` (`batch_id`, `batch_name`, `course_id`, `semester_id`) VAL
 CREATE TABLE `course_m` (
   `course_id` int(11) NOT NULL,
   `course_name` varchar(30) NOT NULL,
-  `director_id` int(11) NOT NULL
+  `director_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -219,8 +218,7 @@ CREATE TABLE `course_m` (
 --
 
 INSERT INTO `course_m` (`course_id`, `course_name`, `director_id`) VALUES
-(8, 'MCA', 12),
-(11, 'BCA', 15);
+(19, 'MCA', 27);
 
 -- --------------------------------------------------------
 
@@ -240,7 +238,7 @@ CREATE TABLE `division_m` (
 --
 
 INSERT INTO `division_m` (`division_id`, `division_name`, `course_id`, `semester_id`) VALUES
-(1, 'Division A', 8, 1);
+(8, 'Division A', 19, 9);
 
 -- --------------------------------------------------------
 
@@ -345,7 +343,8 @@ INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES
 (33, 'Semester', '0002_alter_semester_m_semester_name', '2021-07-20 18:15:30.851862'),
 (34, 'Division', '0002_alter_division_m_division_name', '2021-07-20 20:09:08.494986'),
 (35, 'Subject', '0002_subject_m_subject_code', '2021-07-20 20:45:04.468390'),
-(36, 'Subject', '0003_alter_subject_m_subject_type', '2021-07-20 20:48:48.265880');
+(36, 'Subject', '0003_alter_subject_m_subject_type', '2021-07-20 20:48:48.265880'),
+(37, 'Course', '0002_alter_course_m_director_id', '2021-07-23 09:04:00.035403');
 
 -- --------------------------------------------------------
 
@@ -393,7 +392,7 @@ CREATE TABLE `exam_m` (
 --
 
 INSERT INTO `exam_m` (`exam_id`, `exam_name`, `total_marks`, `passing_marks`, `exam_date`, `batch_id`, `course_id`, `faculty_id`, `semester_id`, `subject_id`) VALUES
-(1, 'ST Unit 1', '70', '35', '2021-07-24', 1, 8, 13, 1, 6);
+(4, 'PHP Unit 1', '50', '25', '2021-07-24', 6, 19, 28, 9, 9);
 
 -- --------------------------------------------------------
 
@@ -420,14 +419,13 @@ CREATE TABLE `extendeduser` (
 --
 
 INSERT INTO `extendeduser` (`id`, `user_role`, `name`, `email`, `enrollment_number`, `course_name`, `semester_name`, `division_name`, `batch_name`, `elective_subject`, `user_id`) VALUES
-(1, 'Student', 'Sumit Jamnani', 'sumitjamnani786@gmail.com', 205350694034, 'MCA', 'Semester 1', 'Division A', 'MCA 2020', 'Software Testing', 2),
-(2, 'Faculty', 'Kruti Jani', 'kj@gmail.com', 0, 'MCA', NULL, NULL, NULL, NULL, 11),
-(3, 'Director', 'Hardik Soni', 'hs@gmail.com', 0, 'MCA', NULL, NULL, NULL, NULL, 12),
-(4, 'Faculty', 'Harish Morwani', 'hm@gmail.com', 0, 'MCA', NULL, NULL, NULL, NULL, 13),
-(5, 'Student', 'Lucky Jamnani', 'luckyjamnani@gmail.com', 205350694035, 'MCA', 'Semester 1', 'Division A', 'MCA 2020', 'Software Testing', 14),
-(6, 'Director', 'Anuradha Sharma', 'as@gmail.com', 0, NULL, NULL, NULL, NULL, NULL, 15),
-(7, 'Admin', 'Sumit Jamnani', 'admin@gmail.com', NULL, '8', NULL, NULL, NULL, NULL, 1),
-(8, 'Faculty', 'Tinal Parikh', 'tp@gmail.com', 0, '8', NULL, NULL, NULL, NULL, 16);
+(7, 'Admin', 'Sumit Jamnani', 'admin@gmail.com', NULL, 'MCA', NULL, NULL, NULL, NULL, 1),
+(19, 'Director', 'Hardik Soni', 'hs@gmail.com', 0, 'MCA', NULL, NULL, NULL, NULL, 27),
+(20, 'Faculty', 'Tinal Parikh', 'tp@gmail.com', 0, 'MCA', NULL, NULL, NULL, NULL, 28),
+(21, 'Faculty', 'Kruti Jani', 'kj@gmail.com', 0, 'MCA', NULL, NULL, NULL, NULL, 29),
+(22, 'Student', 'Sumit Jamnani', 'sumitjamnani786@gmail.com', 205350694034, 'MCA', 'Semester 1', 'Division A', 'MCA 2020', 'BCC', 30),
+(23, 'Student', 'Avisha Patel', 'ap@gmail.com', 205350694021, 'MCA', 'Semester 1', 'Division A', 'MCA 2020', 'BCC', 31),
+(24, 'Student', 'Niyati Pathak', 'np@gmail.com', 205350694013, 'MCA', 'Semester 1', 'Division A', 'MCA 2020', 'BCC', 32);
 
 -- --------------------------------------------------------
 
@@ -449,7 +447,8 @@ CREATE TABLE `faculty_subject_m` (
 --
 
 INSERT INTO `faculty_subject_m` (`fact_subject_id`, `batch_id`, `course_id`, `faculty_id`, `semester_id`, `subject_id`) VALUES
-(1, 1, 8, 13, 1, 6);
+(6, 6, 19, 28, 9, 9),
+(7, 6, 19, 29, 9, 10);
 
 -- --------------------------------------------------------
 
@@ -475,8 +474,9 @@ CREATE TABLE `result_m` (
 --
 
 INSERT INTO `result_m` (`result_id`, `enrollment_number`, `marks_obtained`, `status`, `batch_id`, `course_id`, `exam_id`, `faculty_id`, `semester_id`, `subject_id`) VALUES
-(1, 205350694034, '65', 'Pass', 1, 8, 1, 13, 1, 6),
-(2, 205350694035, '30', 'Fail', 1, 8, 1, 13, 1, 6);
+(8, 205350694034, '20', 'Fail', 6, 19, 4, 28, 9, 9),
+(9, 205350694021, '45', 'Pass', 6, 19, 4, 28, 9, 9),
+(10, 205350694013, '47', 'Pass', 6, 19, 4, 28, 9, 9);
 
 -- --------------------------------------------------------
 
@@ -495,8 +495,8 @@ CREATE TABLE `semester_m` (
 --
 
 INSERT INTO `semester_m` (`semester_id`, `semester_name`, `course_id`) VALUES
-(1, 'Semester 1', 8),
-(2, 'Semester 2', 8);
+(9, 'Semester 1', 19),
+(10, 'Semester 2', 19);
 
 -- --------------------------------------------------------
 
@@ -519,8 +519,8 @@ CREATE TABLE `subject_m` (
 --
 
 INSERT INTO `subject_m` (`subject_id`, `subject_name`, `subject_type`, `batch_id`, `course_id`, `semester_id`, `subject_code`) VALUES
-(4, 'PHP', 'Regular', 1, 8, 1, 'A002'),
-(6, 'Software Testing', 'Elective', 1, 8, 1, 'A003');
+(9, 'PHP', 'Regular', 6, 19, 9, 'A001'),
+(10, 'BCC', 'Elective', 6, 19, 9, 'A002');
 
 --
 -- Indexes for dumped tables
@@ -710,7 +710,7 @@ ALTER TABLE `auth_permission`
 -- AUTO_INCREMENT for table `auth_user`
 --
 ALTER TABLE `auth_user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT for table `auth_user_groups`
@@ -728,19 +728,19 @@ ALTER TABLE `auth_user_user_permissions`
 -- AUTO_INCREMENT for table `batch_m`
 --
 ALTER TABLE `batch_m`
-  MODIFY `batch_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `batch_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `course_m`
 --
 ALTER TABLE `course_m`
-  MODIFY `course_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `course_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `division_m`
 --
 ALTER TABLE `division_m`
-  MODIFY `division_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `division_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `django_admin_log`
@@ -758,43 +758,43 @@ ALTER TABLE `django_content_type`
 -- AUTO_INCREMENT for table `django_migrations`
 --
 ALTER TABLE `django_migrations`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT for table `exam_m`
 --
 ALTER TABLE `exam_m`
-  MODIFY `exam_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `exam_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `extendeduser`
 --
 ALTER TABLE `extendeduser`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `faculty_subject_m`
 --
 ALTER TABLE `faculty_subject_m`
-  MODIFY `fact_subject_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `fact_subject_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `result_m`
 --
 ALTER TABLE `result_m`
-  MODIFY `result_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `result_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `semester_m`
 --
 ALTER TABLE `semester_m`
-  MODIFY `semester_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `semester_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `subject_m`
 --
 ALTER TABLE `subject_m`
-  MODIFY `subject_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `subject_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- Constraints for dumped tables

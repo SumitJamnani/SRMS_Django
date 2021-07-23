@@ -105,7 +105,7 @@
                     </button>
 
                     {% if CourseSearch %}
-                    <button type="submit" form="course_mgmt" class="btn btn-info" name="update">
+                    <button form="course_mgmt" class="btn btn-info" name="update">
                         <a class="text-white" href="{% url 'course:update/' CourseSearch.course_id%}" onclick="document.forms[0].submit();">
                             <i class="fas fa-edit"></i> Update
                         </a>
@@ -129,7 +129,7 @@
                     {% endif %}
 
                     <button type="reset" class="btn btn-warning" name="clear">
-                        <a style="color:black;" href="{% url 'semester:add' %}">
+                        <a style="color:black;" href="{% url 'course:add' %}">
                             <i class="fas fa-times-circle"></i> Clear
                         </a>
                     </button>

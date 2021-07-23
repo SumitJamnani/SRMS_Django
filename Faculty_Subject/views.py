@@ -35,7 +35,7 @@ def allocate_subject(request):
         if request.method == 'POST':
             if request.POST.get('course_id') is not None and request.POST.get('faculty_id') is not None and request.POST.get('semester_id') is not None and request.POST.get('subject_id') is not None:
                 course_id = Course_m.objects.get(course_id=request.POST.get('course_id'))
-                batch_id = Batch_m.objects.get(semester_id=request.POST.get('batch_id'))
+                batch_id = Batch_m.objects.get(batch_id=request.POST.get('batch_id'))
                 faculty_id = User.objects.get(id=request.POST.get('faculty_id'))
                 semester_id = Semester_m.objects.get(semester_id=request.POST.get('semester_id'))
                 subject_id = Subject_m.objects.get(subject_id=request.POST.get('subject_id'))
